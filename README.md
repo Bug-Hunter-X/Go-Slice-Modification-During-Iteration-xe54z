@@ -1,0 +1,2 @@
+# Go Slice Modification During Iteration
+This repository demonstrates a common error in Go when modifying slices during iteration.  The provided code attempts to remove all occurrences of the number 5 from a slice, but due to the way slices and append work in Go, the code produces incorrect results.  The solution provides a correct approach to remove elements from a slice while iterating.
