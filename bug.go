@@ -1,0 +1,3 @@
+func myFunc(a []int) {  for i := range a {  if a[i] == 5 {  a = append(a[:i], a[i+1:]...) // Removing element  }  }}
+This function intends to remove all occurrences of the number 5 from the input slice. However, it contains a subtle error: modifying the slice during iteration using append.
+The append operation creates a *new* slice. The original slice 'a' still points to the old data, which leads to the index going out of bounds or skipping elements. 
